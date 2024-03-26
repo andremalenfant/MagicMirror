@@ -1,0 +1,26 @@
+{
+  "name": "MMM-Inkbird",
+  "version": "1.0.0",
+  "description": "A MagicMirror module that displays Inbird temperature.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichMich/mmm-systemtemperature"
+  },
+  "main": "MMM-Inkbird.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andre Malenfant",
+  "contributors": [
+    {
+      "name": "Alvaro Naveda",
+      "email": "alvaro@naveda.me",
+      "url": "https://github.com/naveda89/"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "noble": "^1.9.1"
+  }
+}
