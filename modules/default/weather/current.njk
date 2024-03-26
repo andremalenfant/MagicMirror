@@ -39,7 +39,9 @@
     {% endif %}
     <div class="large light">
         <span class="wi weathericon wi-{{ current.weatherType }}"></span>
-        <span class="bright">{{ current.temperature | roundValue | unit("temperature") | decimalSymbol }}</span>
+        <span class="bright">
+            <span class="dimmed xxsmall">{{current.source}}</span>{{ current.temperature | roundValue | unit("temperature") | decimalSymbol}}
+        </span>
     </div>
     <div class="normal light indoor">
         {% if config.showIndoorTemperature and indoor.temperature %}

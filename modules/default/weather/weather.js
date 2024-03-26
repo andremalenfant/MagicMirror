@@ -122,7 +122,15 @@ Module.register("weather", {
 			this.updateDom(300);
 		} else if (notification === "CURRENT_WEATHER_OVERRIDE" && this.config.allowOverrideNotification) {
 			this.weatherProvider.notificationReceived(payload);
-		}
+		} else if (notification === "INKBIRD-TEMPERATURE") {
+			var current = this.weatherProvider.currentWeather();
+			if (current) {
+				current.temperature = this.roundValue(payload.temp);
+				current.humidity = this.roundValue(payload.humidity)
+				current.source = "IB";
+			}
+			this.updateDom(300);
+	    }
 	},
 
 	// Select the template depending on the display type.
